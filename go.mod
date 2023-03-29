@@ -7,6 +7,7 @@ require (
 	github.com/gin-gonic/gin v1.9.0
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/spf13/viper v1.15.0
+	golang.org/x/exp v0.0.0-20230321023759-10a507213a29
 	gorm.io/driver/mysql v1.4.7
 	gorm.io/gorm v1.24.6
 )

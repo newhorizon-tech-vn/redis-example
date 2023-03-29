@@ -37,8 +37,8 @@ func main() {
 	h := controllers.MakeHandler("v1")
 
 	router := gin.Default()
-	router.GET("/albums", authorize.Auth(), h.GetAlbums)
-	router.POST("/albums", h.PostAlbums)
+	router.Use(gin.Recovery())
+	router.GET("/v1/class/:classId", authorize.Auth(), h.CheckClass)
 
 	router.Run(fmt.Sprintf("localhost:%d", viper.GetInt("setting.port")))
 	quit := make(chan os.Signal)

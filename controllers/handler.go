@@ -6,8 +6,7 @@ import (
 )
 
 type IHandler interface {
-	GetAlbums(c *gin.Context)
-	PostAlbums(c *gin.Context)
+	CheckClass(c *gin.Context)
 }
 
 func MakeHandler(version string) IHandler {
